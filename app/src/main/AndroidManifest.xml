@@ -16,7 +16,7 @@
         <activity
             android:name=".FirstActivity"
             android:exported="true"
-            android:launchMode="standard">
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,6 +25,7 @@
         </activity>
 
         <activity android:name=".SecondActivity" />
+        <activity android:name=".ThirdActivity" />
 
 
     </application>
