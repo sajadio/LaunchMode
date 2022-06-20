@@ -27,8 +27,4 @@ class FourthActivity : AppCompatActivity() {
         }
 
     }
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d("LaunchMode", "FourthActivity is destroyed")
-    }
 }

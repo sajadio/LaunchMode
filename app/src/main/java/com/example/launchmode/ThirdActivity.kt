@@ -27,8 +27,4 @@ class ThirdActivity : AppCompatActivity() {
         }
 
     }
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d("LaunchMode", "ThirdActivity is destroyed")
-    }
 }
