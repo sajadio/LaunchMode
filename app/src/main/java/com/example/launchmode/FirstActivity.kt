@@ -19,7 +19,7 @@ class FirstActivity : AppCompatActivity() {
         val taskID = this.taskId
         "Task id: $taskID\n Activity Id : $this".also { textView.text = it }
 
-        Log.d("LaunchMode", "FirstActivity TaskID: $taskID")
+        Log.d("LaunchMode", "FirstActivity TaskID: ${this.taskId}")
         Log.d("LaunchMode", "FirstActivity ID: $$this")
 
         openGallery.setOnClickListener {
@@ -29,5 +29,6 @@ class FirstActivity : AppCompatActivity() {
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK // like launchMode="singleTask"
             startActivity(intent)
         }
+
     }
 }
