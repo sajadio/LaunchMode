@@ -1,13 +1,12 @@
 package com.example.launchmode
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import org.w3c.dom.Text
+import androidx.appcompat.app.AppCompatActivity
 
 class FirstActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,8 +14,7 @@ class FirstActivity : AppCompatActivity() {
         setContentView(R.layout.activity_first)
 
         val textView = findViewById<TextView>(R.id.textView)
-        val firstBtn = findViewById<Button>(R.id.startFirstActivityButton)
-        val secondBtn = findViewById<Button>(R.id.startSecondActivityButton)
+        val openGallery = findViewById<Button>(R.id.openGallery)
 
         val taskID = this.taskId
         "Task id: $taskID\n Activity Id : $this".also { textView.text = it }
@@ -24,14 +22,12 @@ class FirstActivity : AppCompatActivity() {
         Log.d("LaunchMode", "FirstActivity TaskID: $taskID")
         Log.d("LaunchMode", "FirstActivity ID: $$this")
 
-        firstBtn.setOnClickListener {
-            startActivity(Intent(this, this::class.java))
-        }
-
-        secondBtn.setOnClickListener {
-            val i = (Intent(this, SecondActivity::class.java))
-            i.putExtra("name", "this is from first activity")
-            startActivity(i)
+        openGallery.setOnClickListener {
+            val intent = Intent()
+            intent.action = Intent.ACTION_VIEW
+            intent.type = "image/*"
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK // like launchMode="singleTask"
+            startActivity(intent)
         }
     }
 }
