@@ -29,7 +29,7 @@ class SecondActivity : AppCompatActivity() {
 
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
-        Toast.makeText(this,"A new Intent called", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, intent?.getStringExtra("name"), Toast.LENGTH_SHORT).show()
     }
 
 }

@@ -29,7 +29,9 @@ class FirstActivity : AppCompatActivity() {
         }
 
         secondBtn.setOnClickListener {
-            startActivity(Intent(this, SecondActivity::class.java))
+            val i = (Intent(this, SecondActivity::class.java))
+            i.putExtra("name", "this is from first activity")
+            startActivity(i)
         }
     }
 }
