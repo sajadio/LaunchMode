@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4AC39D"
+    android:background="#2196F3"
     tools:context=".SecondActivity">
 
     <TextView
@@ -40,7 +40,7 @@
         tools:text="Hello World!" />
 
     <Button
-        android:id="@+id/startFirstActivityButton"
+        android:id="@+id/startThirdActivityButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"

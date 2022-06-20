@@ -31,11 +31,5 @@ class FirstActivity : AppCompatActivity() {
         secondBtn.setOnClickListener {
             startActivity(Intent(this, SecondActivity::class.java))
         }
-
-    }
-
-    override fun onNewIntent(intent: Intent?) {
-        super.onNewIntent(intent)
-        Toast.makeText(this,"A new Intent called",Toast.LENGTH_SHORT).show()
     }
 }

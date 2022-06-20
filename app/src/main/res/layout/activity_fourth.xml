@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9C27B0"
-    tools:context=".SecondActivity">
+    android:background="#754DBC"
+    tools:context=".FourthActivity">
 
     <TextView
         android:id="@+id/title"
@@ -16,7 +16,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:text="Third Activity"
+        android:text="Fourth Activity"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -45,9 +45,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:gravity="center"
-        android:text="Start Fourth Activity"
+        android:text="Start First Activity"
         app:layout_constraintEnd_toEndOf="parent"
-        android:backgroundTint="#754DBC"
+        android:backgroundTint="#8BC34A"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />

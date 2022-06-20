@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 
 class ThirdActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,8 +23,12 @@ class ThirdActivity : AppCompatActivity() {
         Log.d("LaunchMode", "ThirdActivity ID: $$this")
 
         firstBtn.setOnClickListener {
-            startActivity(Intent(this, FirstActivity::class.java))
+            startActivity(Intent(this, FourthActivity::class.java))
         }
 
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("LaunchMode", "ThirdActivity is destroyed")
     }
 }
